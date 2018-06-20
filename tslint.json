@@ -5,5 +5,9 @@
       "config/**/*.js",
       "node_modules/**/*.ts"
     ]
+  },
+  "rules": {
+    "max-classes-per-file": false,
+    "member-access": false
   }
 }
