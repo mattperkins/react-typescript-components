@@ -1,6 +1,7 @@
 import * as React from 'react'
 import './App.css'
 import MyComp from './MyComp'
+import { WSAEALREADY } from 'constants';
 
 interface IProps { name?: string; isGood?: boolean; count: number }
 
@@ -20,6 +21,7 @@ class MyClass extends React.Component<IProps, IState>
 
   render() {
     const { name, count } = this.props
+    // const { count } = this.state
     return(
       <div>
         <h1>{name}</h1>
@@ -30,10 +32,18 @@ class MyClass extends React.Component<IProps, IState>
 }
 
 export default class App extends React.Component {
+  handleChange = (e: React.FormEvent<HTMLInputElement>) => {
+    const {name, value}: any = e.target
+    this.setState({
+      [name]: value
+    })
+  }
+  
   render() {
     return (
       <div>
       <MyClass /* name="Sandy" <= using default props above */ count={11}/>
+      <input name="name" value={name} onChange={this.handleChange}
       <MyComp />
       </div>
     )
