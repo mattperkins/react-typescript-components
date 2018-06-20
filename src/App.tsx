@@ -12,6 +12,7 @@ import * as React from 'react'
 import './App.css'
 import MyComp from './MyComp'
 
+// array<string>
 interface IProps { name?: string; isGood?: boolean; count: number }
 
 interface IState { count: number; lemon: string}
