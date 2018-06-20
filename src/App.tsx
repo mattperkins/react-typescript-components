@@ -2,7 +2,13 @@
 // const { name, value } : { name: string; value: boolean; } = e.target
 // const { name, value } : { name: keyof IState; value: string; } = e.target
 
+// import { omit } from "lodash" <= add lodash to images.d.ts or your own myTypes.d.ts file:
+// declare module 'lodash'
+// OR ignore adding to .d.ts file and:
+// $ yarn add -D @types/lodash <= but not all libraries supported
+
 import * as React from 'react'
+
 import './App.css'
 import MyComp from './MyComp'
 
