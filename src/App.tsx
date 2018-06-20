@@ -1,4 +1,6 @@
-// const { lime } : any = e.target
+// const { name, value } : any = e.target
+// const { name, value } : { name: string; value: boolean; } = e.target
+// const { name, value } : { name: keyof IState; value: string; } = e.target
 
 import * as React from 'react'
 import './App.css'
