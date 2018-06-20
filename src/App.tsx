@@ -1,6 +1,6 @@
-// const { name, value } : any = e.target
-// const { name, value } : { name: string; value: boolean; } = e.target
-// const { name, value } : { name: keyof IState; value: string; } = e.target
+// const { name, value } : any = e.currentTarget
+// const { name, value } : { name: string; value: boolean; } = e.currentTarget
+// const { name, value } : { name: keyof IState; value: string; } = e.currentTarget
 
 // import { omit } from "lodash" <= add lodash to images.d.ts or your own myTypes.d.ts file:
 // declare module 'lodash'
@@ -29,6 +29,7 @@ class MyClass extends React.Component<IProps, IState>
     lemon: ''
   }
 
+    // handleChange = (e: any) => {} <= covers every element
     handleChange = (e: React.FormEvent<HTMLInputElement>) => {
 
     this.setState({
