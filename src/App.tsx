@@ -1,11 +1,12 @@
+// const { lime } : any = e.target
+
 import * as React from 'react'
 import './App.css'
 import MyComp from './MyComp'
-import { WSAEALREADY } from 'constants';
 
 interface IProps { name?: string; isGood?: boolean; count: number }
 
-interface IState { count: number; }
+interface IState { count: number; lemon: string}
 
 class MyClass extends React.Component<IProps, IState> 
 /* <= if no props use <{}, IState>. If no state just use <IProps> */ 
@@ -16,34 +17,38 @@ class MyClass extends React.Component<IProps, IState>
  }
 
    state: IState = {
-    count: this.props.count
+    count: this.props.count,
+    lemon: ''
   }
 
+    handleChange = (e: React.FormEvent<HTMLInputElement>) => {
+
+    this.setState({
+        lemon : "Bob"
+
+    })
+  }
+  
   render() {
     const { name, count } = this.props
-    // const { count } = this.state
+    const { lemon } = this.state
     return(
       <div>
         <h1>{name}</h1>
         <h2>{count}</h2>
+        <input name={lemon} value={lemon} onChange={this.handleChange} />
       </div>
     )
   }
 }
 
 export default class App extends React.Component {
-  handleChange = (e: React.FormEvent<HTMLInputElement>) => {
-    const {name, value}: any = e.target
-    this.setState({
-      [name]: value
-    })
-  }
-  
+      
   render() {
     return (
       <div>
       <MyClass /* name="Sandy" <= using default props above */ count={11}/>
-      <input name="name" value={name} onChange={this.handleChange}
+      
       <MyComp />
       </div>
     )
