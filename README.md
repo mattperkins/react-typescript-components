@@ -4,5 +4,6 @@
 ## yarn start 
 # ENDPOINTS 
 ## localhost: 3000
-# DEPLOY 
-## npm build
+# DEPLOY
+## Add to package.json : "homepage": "http://domain.com/" 
+## yarn build
