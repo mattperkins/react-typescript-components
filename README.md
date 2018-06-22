@@ -7,3 +7,4 @@
 # DEPLOY
 ## Add to package.json : "homepage": "http://domain.com/" 
 ## yarn build
+## deploy build folder to server/dir
