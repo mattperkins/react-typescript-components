@@ -5,7 +5,7 @@ import './App.css'
 
 import ClassComp from './ClassComp'
 import FuncComp from './FuncComp'
-
+import MaxComp from './MaxComp'
 
 export default class App extends React.Component {
       
@@ -17,6 +17,7 @@ export default class App extends React.Component {
 
       <FuncComp />
 
+      <MaxComp name="Fred"/>
       </div>
     )
   }
