@@ -5,6 +5,6 @@ import * as React from 'react'
 //   userLoggedIn?: ['Yes', 'No']
 // }
 
-const MyComp = () => <p>hello</p>
+const FuncComp = () => <p>hello</p>
 
-export default MyComp
+export default FuncComp
